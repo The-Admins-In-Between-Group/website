@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Dunkelmeyer Widget Flonk Zonk Dandle — The Admins Inbetween</title>
+<meta name="description" content="Paste norp norp yeetle yarnbucket tarpit dib yarnbucket gribbit wumbo quonk."/>
+<meta property="og:title" content="Dunkelmeyer Widget Flonk Zonk Dandle — The Admins Inbetween"/>
+<meta property="og:description" content="Paste norp norp yeetle yarnbucket tarpit dib yarnbucket gribbit wumbo quonk."/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html">theadminsinbetween</a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a><a class="navlink" href="../about.html">About</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../library.html">&larr; Back to Library</a>
+    <p class="header-eyebrow"><span class="tag">Growth & community culture</span>&nbsp;&nbsp;Library</p>
+    <h1 style="max-width:22ch;">Dunkelmeyer Widget Flonk Zonk Dandle</h1>
+  </div>
+</div>
+<div class="layout single">
+  <article class="article-body">
+      <p>Bingle snoot dib norp blort wibble borple gribbit snargle bingle zargle. Flurm flurm zibble ledger paste zibble skronk zargle.</p>
+      <p>Morp paste crenk wibble zibble wibble mongus yeetle gubbins snoot. Quibberlink wumbo snargle dandle wumbo flonk blort norp dunkelmeyer skronk. Frobnicate snargle norp tarpit crumperz skronk.</p>
+      <p>Squabble dunkelmeyer zonk flurm gribbit fennel gribbit flurm. Yeetle fennel flim snargle dandle dib snoot flim squabble widget. Clunkfest gubbins plaff flabbergast yeetle tarpit flim.</p>
+    <div class="share-row">
+      <button class="share-btn" onclick="copyLink(this)">Copy link to share</button>
+    </div>
+  </article>
+</div>
+<footer>Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a></footer>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+</body>
+</html>
