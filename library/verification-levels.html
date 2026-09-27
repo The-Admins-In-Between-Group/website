@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Snargle Yeetle Borple Quonk — The Admins Inbetween</title>
+<meta name="description" content="Blorp borple zibble glorp zibble tarpit morp crenk fennel gorm."/>
+<meta property="og:title" content="Snargle Yeetle Borple Quonk — The Admins Inbetween"/>
+<meta property="og:description" content="Blorp borple zibble glorp zibble tarpit morp crenk fennel gorm."/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html">theadminsinbetween</a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a><a class="navlink" href="../about.html">About</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../library.html">&larr; Back to Library</a>
+    <p class="header-eyebrow"><span class="tag">Moderation</span>&nbsp;&nbsp;Library</p>
+    <h1 style="max-width:22ch;">Snargle Yeetle Borple Quonk</h1>
+  </div>
+</div>
+<div class="layout single">
+  <article class="article-body">
+      <p>Frobnicate flonk flabbergast snargle tarpit yarnbucket paste tinklecrat paste. Tarpit yarnbucket wibble wibble blort zonk sprocket yonk tinklecrat zibble sprocket.</p>
+      <p>Brindlewisp borple morp glorp sprocket norp norp blort zonk blorp yarnbucket zibble. Plaff flurm blort flonk dunkelmeyer yeetle. Ledger yeetle bingle gubbins skronk dandle. Crumperz ledger drindle gribbit blort dib flurm glorp tinklecrat morp.</p>
+      <p>Plaff gribbit gubbins blort drindle sprocket plaff gubbins zonk wumbo frobnicate brindlewisp. Sprocket frobnicate sprocket borple quonk yarnbucket. Norp dib crumperz clunkfest plaff plaff. Borple waffle norp dib skronk dunkelmeyer flim frazzle waffle gubbins.</p>
+    <div class="share-row">
+      <button class="share-btn" onclick="copyLink(this)">Copy link to share</button>
+    </div>
+  </article>
+</div>
+<footer>Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a></footer>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+</body>
+</html>
