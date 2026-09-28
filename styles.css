@@ -101,10 +101,13 @@ footer a { color: var(--grey-light); font-weight: 700; text-decoration: none; bo
   position: fixed; top: 55%; left: -170px; z-index: 2001; pointer-events: none;
   animation: egg-swim 7s cubic-bezier(.45,0,.55,1) forwards;
 }
-.egg-fish-body { width: 132px; }
-.egg-fish-body svg { display: block; width: 100%; height: auto; overflow: visible; filter: drop-shadow(0 5px 12px rgba(0,0,0,0.4)); }
-.egg-fish-tail { transform-box: fill-box; transform-origin: 0% 50%; animation: egg-tailwag .42s ease-in-out infinite; }
-.egg-fish-torso { transform-box: fill-box; transform-origin: 100% 50%; animation: egg-bodysway .84s ease-in-out infinite; }
+.egg-fish-body { position: relative; width: 170px; aspect-ratio: 442 / 175; }
+.egg-fish-torso, .egg-fish-tail {
+  position: absolute; top: 0; height: 100%; object-fit: cover;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.35));
+}
+.egg-fish-torso { left: 0; width: 67.87%; transform-origin: 100% 50%; animation: egg-bodysway .84s ease-in-out infinite; }
+.egg-fish-tail { left: 67.87%; width: 32.13%; transform-origin: 0% 50%; animation: egg-tailwag .42s ease-in-out infinite; }
 .egg-bubble {
   position: absolute; left: 50%; top: -46px; transform: translateX(-42%);
   background: var(--white); color: var(--black);
