@@ -49,3 +49,17 @@
     });
   });
 })();
+
+let count = 0;
+let hasLiked = false;
+
+function addLike(btn) {
+  if (!hasLiked) {
+    count++;
+    document.getElementById("likeCount").innerText = count;
+    btn.classList.add("liked");
+    hasLiked = true;
+  }
+}
+
+function nativeShare() { if (navigator.share) { navigator.share({ url: window.location.href }); } else { copyLink(this); } }
