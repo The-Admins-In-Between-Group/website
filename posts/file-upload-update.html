@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>New File Upload limit — Blog | The Admins Inbetween</title>
+<meta name="description" content="Sept 30, 2026 - The file upload limit for users has been increased."/>
+<meta property="og:title" content="New File Upload limit — Blog"/>
+<meta property="og:description" content="Sept 30, 2026 - The file upload limit for users has been increased."/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+</a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <p class="header-eyebrow"><span class="tag">Quality of Life</span>&nbsp;&nbsp;Aug 13, 2026</p>
+    <h1 style="max-width:22ch;">New File Upload limit</h1>
+    <p class="header-sub"> ↺ - Updated article. Review the changes under the article.</a></p>
+  </div>
+</div>
+<div class="layout">
+  <article class="article-body">
+      <p> Discord has updated the file upload limit for all non-Nitro users. </p>
+      <p> The file(s) size limit is now up to <u>20 MB</u> from <u>10 MB</u>. The limit for Nitro users and boosted servers stay the same.</p>
+      <hr style="border: none; border-top: 1px solid var(--dark); margin: 36px 0;">
+      <h2> ↺ Update (Sept 30, 2026): <b>New File Upload limit for Nitro users</b></h2>
+      <p> Discord has also updated the file upload limit for Nitro users.</p>
+      <p> The file(s) size limit is now up to <u>1 GB</u> from <u>500 MB</u>. The limit for boosted servers stay the same.</p>
+  </article>
+  <aside>
+    <img src="../assets/upload-limit.jpg" alt="Nitro File Upload Limit" style="max-width: 90%; border-radius: 8px;">
+  </aside>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
+    <span> Source - <a href="https://discord.gg/discord-townhall" target="_blank" rel="noopener noreferrer">Discord Town Hall</a></span>
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr/Coxipooh</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>

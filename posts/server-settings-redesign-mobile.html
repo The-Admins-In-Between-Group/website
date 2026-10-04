@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Server Redesign on Mobile — Blog | The Admins Inbetween</title>
+<meta name="description" content="Sept 17, 2026 - The server settings on mobile has been redesigned to include new options."/>
+<meta property="og:title" content="Server Redesign on Mobile — Blog"/>
+<meta property="og:description" content="Sept 17, 2026 - The server settings on mobile has been redesigned to include new options."/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+</a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <p class="header-eyebrow"><span class="tag">User Interface</span>&nbsp;&nbsp;Sept 17, 2026</p>
+    <h1 style="max-width:22ch;">Server Redesign on Mobile</h1>
+    <p class="header-sub"> ↺ - Updated article. Review the changes under the article.</a></p>
+  </div>
+</div>
+<div class="layout">
+  <article class="article-body">
+      <p>After years of requesting, Discord has finally redesigned the server settings to bring Automod configuration (amomng others) to mobile.</p>
+      <p>(⚠️ This has not been officially announced, this is just from an engineer that worked on it so there is no ETA and is subject to change.)</p>
+      <hr style="border: none; border-top: 1px solid var(--dark); margin: 36px 0;">
+      <h2> ↺ Update (Sept 22, 2026): <b>Redesign launched on Alpha/Beta</b></h2>
+      <p> The redesigned server settings on mobile has been released to all users on the <a href="https://support.discord.com/hc/en-us/articles/360035675191-Discord-Testing-Clients" target="_blank" rel="noopener noreferrer">Alpha/Beta version of Discord</a> and will soon be released to stable (no ETA).</p>
+      <hr style="border: none; border-top: 1px solid var(--dark); margin: 36px 0;">
+      <h2> ↺ Update (Oct 4, 2026): <b>Redesign launched on stable</b></h2>
+      <p> The redesigned server settings on mobile has been released to all users on the stable version of Discord.</p>
+  </article>
+<aside style="display: flex; justify-content: flex-end;">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <button class="gallery-btn" onclick="changeImage(this, -1)">&#10094;</button>
+    
+    <div>
+      <div class="gallery-img active" style="text-align: center;">
+        <img src="../assets/server-settings-p1.png" style="max-width: 280px; border-radius: 8px;">
+        <p style="margin-top: 8px; font-size: 14px; color: var(--grey);">Server settings Redesign</p>
+      </div>
+      
+      <div class="gallery-img" style="text-align: center;">
+        <img src="../assets/server-settings-p2.png" style="max-width: 280px; border-radius: 8px;">
+        <p style="margin-top: 8px; font-size: 14px; color: var(--grey);">Server settings Redesign</p>
+      </div>
+
+      <div class="gallery-img" style="text-align: center;">
+        <img src="../assets/automod.png" style="max-width: 280px; border-radius: 8px;">
+        <p style="margin-top: 8px; font-size: 14px; color: var(--grey);">AutoMod Configuration</p>
+      </div>
+      
+      <div class="gallery-img" style="text-align: center;">
+        <img src="../assets/server-insights-p1.png" style="max-width: 280px; border-radius: 8px;">
+        <p style="margin-top: 8px; font-size: 14px; color: var(--grey);">Server Insights (when a server doesn't have insights available)</p>
+      </div>
+      
+      <div class="gallery-img" style="text-align: center;">
+        <img src="../assets/server-insights-p2.PNG" style="max-width: 280px; border-radius: 8px;">
+        <p style="margin-top: 8px; font-size: 14px; color: var(--grey);">Server Insights</p>
+      </div>
+    </div>
+    
+    <button class="gallery-btn" onclick="changeImage(this, 1)">&#10095;</button>
+  </div>
+</aside>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
+    <span> Source - an engineer from Discord Admin </span>
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Coxipooh</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>

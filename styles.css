@@ -155,3 +155,16 @@ footer a { color: var(--grey-light); font-weight: 700; text-decoration: none; bo
   .header h1 { font-size: 28px; }
   .nav-links { display: none; }
 }
+.gallery-img { display: none; }
+.gallery-img.active { display: block; }
+.gallery-btn { 
+  background: rgba(255, 255, 255, 0.1); 
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  padding: 8px 12px; 
+  border-radius: 4px; 
+}
+.gallery-btn:hover { background: rgba(255, 255, 255, 0.2); }
+.gallery-btn.prev { left: 8px; }
+.gallery-btn.next { right: 8px; }

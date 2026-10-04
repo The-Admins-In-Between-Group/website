@@ -63,3 +63,18 @@ function addLike(btn) {
 }
 
 function nativeShare() { if (navigator.share) { navigator.share({ url: window.location.href }); } else { copyLink(this); } }
+
+let currentImgIndex = 0;
+
+function changeImage(button, direction) {
+  const gallery = button.parentElement;
+  const images = gallery.querySelectorAll('.gallery-img');
+  
+  let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+  
+  images[currentIndex].classList.remove('active');
+  
+  let nextIndex = (currentIndex + direction + images.length) % images.length;
+  
+  images[nextIndex].classList.add('active');
+}
