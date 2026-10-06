@@ -78,3 +78,34 @@ function changeImage(button, direction) {
   
   images[nextIndex].classList.add('active');
 }
+
+function filterPosts() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  const tag = document.getElementById('tagFilter').value.toLowerCase();
+  const publisher = document.getElementById('publisherFilter').value.toLowerCase();
+
+  document.querySelectorAll('.post').forEach(post => {
+    const titleText = post.querySelector('h2').textContent.toLowerCase();
+    const descText = post.querySelector('p').textContent.toLowerCase();
+    const postTag = post.querySelector('.tag').textContent.toLowerCase();
+    const postPublisher = (post.getAttribute('data-publisher') || "").toLowerCase();
+
+    const matchesText = titleText.includes(query) || descText.includes(query);
+    const matchesTag = tag === "" || postTag === tag;
+    const matchesPublisher = publisher === "" || postPublisher === publisher;
+
+    post.style.display = (matchesText && matchesTag && matchesPublisher) ? '' : 'none';
+  });
+}
+
+function resetAllFilters() {
+  document.getElementById('searchInput').value = "";
+  document.getElementById('tagFilter').value = "";
+  document.getElementById('publisherFilter').value = "";
+  filterPosts(); 
+}
+
+document.getElementById('searchInput').addEventListener('input', filterPosts);
+document.getElementById('tagFilter').addEventListener('change', filterPosts);
+document.getElementById('publisherFilter').addEventListener('change', filterPosts);
+document.getElementById('resetBtn').addEventListener('click', resetAllFilters);

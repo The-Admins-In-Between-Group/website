@@ -31,35 +31,73 @@
 </div>
 <div class="layout">
   <div>
-<div class="post">
+<div class="search-filters" style="display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap;">
+  <input type="text" id="searchInput" placeholder="Search the Blog" style="flex: 1; padding: 8px; border-radius: 4px; border: none; background: rgba(255,255,255,0.1); color: white;">
+  
+  <select id="tagFilter" style="padding: 8px; border-radius: 4px; border: none; background: #2b2d31; color: white;">
+    <option value="">All Tags</option>
+    <option value="Safety">Safety</option>
+    <option value="User Interface">User Interface</option>
+    <option value="Quality of Life">Quality of Life</option>
+    <option value="Moderation">Moderation</option>
+    <option value="Technical">Technical</option>
+  </select>
+
+  <select id="publisherFilter" style="padding: 8px; border-radius: 4px; border: none; background: #2b2d31; color: white;">
+    <option value="">All Publishers</option>
+    <option value="coxipooh">Coxipooh</option>
+    <option value="dinorawr">Dinorawr</option>
+  </select>
+
+  <button id="resetBtn" style="padding: 8px 12px; border-radius: 4px; border: none; background: #4e5058; color: white; cursor: pointer;">Reset</button>
+</div>
+<div class="post" data-publisher="Coxipooh">
       <div class="post-meta"><span class="tag">Safety</span><span class="post-date">Sept 22, 2026</span></div>
-      <h2><a href="posts/age-verification.html">Safe for Teens, Same Discord for Adults</a></h2>
+      <h2><a href="posts/safer-for-teens-same-discord-for-adults.html">Safer for Teens, Same Discord for Adults</a></h2>
       <p>Discord releases their Teen Safety restrictions alongside their Age Verification system.</p>
-      <a class="post-link" href="posts/age-verification.html">Read more &rarr;</a>
+      <a class="post-link" href="posts/safer-for-teens-same-discord-for-adults.html">Read more &rarr;</a>
     </div>
-<div class="post">
+<div class="post" data-publisher="Coxipooh">
       <div class="post-meta"><span class="tag">User Interface</span><span class="post-date">Sept 17, 2026 (updated)</span></div>
       <h2><a href="posts/server-settings-redesign-mobile.html">Server Settings Redesign on Mobile</a></h2>
       <p>The Server Settings interface has been redesigned on mobile devices alognside some new settings.</p>
       <a class="post-link" href="posts/server-settings-redesign-mobile.html">Read more &rarr;</a>
     </div>
-<div class="post">
+<div class="post" data-publisher="Coxipooh">
       <div class="post-meta"><span class="tag">Quality of Life</span><span class="post-date">May 25, 2026 - Sept 16, 2026</span></div>
       <h2><a href="posts/community-requested updates.html">Community Requested Updates</a></h2>
       <p>Discord celebrates their 11th birthday by implementing several community-requested updates.</p>
       <a class="post-link" href="posts/community-requested updates.html">Read more &rarr;</a>
     </div>
-<div class="post">
+<div class="post" data-publisher="Dinorawr">
       <div class="post-meta"><span class="tag">Moderation</span><span class="post-date">Sept 17, 2026</span></div>
       <h2><a href="posts/system-messages-on-moderation.html">System messages on kicks & bans</a></h2>
       <p>Discord has started sending system messages to users when they're removed from servers.</p>
       <a class="post-link" href="posts/system-messages-on-moderation.html">Read more &rarr;</a>
     </div>
-<div class="post">
+<div class="post" data-publisher="Dinorawr">
+      <div class="post-meta"><span class="tag">Safety</span><span class="post-date">Aug 13, 2026</span></div>
+      <h2><a href="posts/live-streaming-features-suspension-in-brazil.html">Live Streaming Features Suspension in Brazil</a></h2>
+      <p>Discord has suspended live streaming features in Brazil.</p>
+      <a class="post-link" href="posts/live-streaming-features-suspension-in-brazil.html">Read more &rarr;</a>
+    </div>
+<div class="post" data-publisher="Coxipooh">
       <div class="post-meta"><span class="tag">Quality of Life</span><span class="post-date">Aug 13, 2026 (updated)</span></div>
       <h2><a href="posts/file-upload-update.html">File Upload Update</a></h2>
       <p>The upload limit for users has been increased.</p>
       <a class="post-link" href="posts/file-upload-update.html">Read more &rarr;</a>
+    </div>
+<div class="post" data-publisher="Dinorawr">
+      <div class="post-meta"><span class="tag">Quality of Life</span><span class="post-date">July 31, 2026</span></div>
+      <h2><a href="posts/new-profile-badges.html">New Profile Badges</a></h2>
+      <p>Discord introduces five new profile badges.</p>
+      <a class="post-link" href="posts/new-profile-badges.html">Read more &rarr;</a>
+    </div>
+<div class="post" data-publisher="Coxipooh">
+      <div class="post-meta"><span class="tag">Technical</span><span class="post-date">June 11, 2026</span></div>
+      <h2><a href="posts/changes-to-privileged-intents-access.html">Changes to Privileged Intents Access</a></h2>
+      <p>Discord has updated the requirements for accessing privileged intents.</p>
+      <a class="post-link" href="posts/changes-to-privileged-intents-access.html">Read more &rarr;</a>
     </div>
   </div>
   <aside>
