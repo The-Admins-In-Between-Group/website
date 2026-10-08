@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>New Nitro Perks — Blog | The Admins Inbetween</title>
+<meta name="description" content="May 11, 2026 - Nitro gets a bunch of discounts, new rewards and brand new partnership."/>
+<meta property="og:title" content="New Nitro Perks — Blog"/>
+<meta property="og:description" content="May 11, 2026 - Nitro gets a bunch of discounts, new rewards and brand new partnership."/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+</a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <p class="header-eyebrow"><span class="tag">Nitro</span>&nbsp;&nbsp;May 11, 2026</p>
+    <h1 style="max-width:22ch;">New Nitro Perks</h1>
+    <p class="header-sub"> ↺ - Updated article. Review the changes under the article.</a></p>
+  </div>
+</div>
+<div class="layout">
+  <article class="article-body">
+    <p> Over the coming weeks, Nitro members will start seeing 3 brand new perks for their subscription: Xbox Game Pass, gaming gear discounts, and bonus Orbs.</p>
+    <p>The price of Nitro will <b><u>NOT</u></b> be increasing, staying at $9.99.</p>
+    <h2>Xbox Game Pass</h2>
+    <p>Users with an active Nitro subscription get Xbox Game Pass with their subscription at no additional cost. The subscription is for the Starter Edition and includes:
+      <ul>
+        <li>50+ games like Stardew Valley, DayZ, and Fallout 4</li>
+        <li>10 hours of cloud gaming each month</li>
+        <li>Play and earn up to $25 a year in the Store with Rewards</li>
+      </ul>
+    </p>
+    <p>This partnership works both ways, eligible Xbox Game Pass subscribers will soon also receive Discord Nitro benefits starting later this month.</p>
+    <h2>Gaming Gear Discounts</h2>
+    <p>Users with an active Nitro subscription now automatically build up to discounts for Logitech G, SteelSeries and KontrolFreak. A discount can be claimed every month.
+      <ul>
+        <li>Up to -30% at Logitech G</li>
+        <li>Up to -15% at SteelSeries</li>
+        <li><s>Up to -15% at KontrolFreak</s> (No longer available)</li>
+      </ul>
+    </p>
+    <h2>More Orbs</h2>
+    <p>Users with an active Nitro subscription will now receive 250 Orbs every month with their subscription, as well as earn a bonus on top the base amount for completing Quests.</p>
+    <hr style="border: 1px solid var(--grey); margin: 24px 0;">
+    <h2> ↺ Update (June 12, 2026): <b>KontrolFreak discount no longer available</b></h2>
+    <p> As of <b>July 1, 2026</b>, the KontrolFreak discount is no longer available. New brand discounts are expected to enter rotation at a later time.</p>
+  </article>
+  <aside>
+    <img src="../assets/new-nitro-perks.png" alt="New Nitro Perks" style="max-width: 100%; border-radius: 8px;">
+    <div class="side-block">
+      <h3>Related Articles</h3>
+      <a class="lib-link" href="https://support.discord.com/hc/en-us/articles/39188406147479-Nitro-Rewards" target="_blank" rel="noopener noreferrer"><span class="lib-cat">Support Article</span>Nitro Rewards</a>
+      <a class="lib-link" href="https://discord.com/blog/beginners-guide-to-nitro" target="_blank" rel="noopener noreferrer"><span class="lib-cat">Blog</span>Beginner's Guide to Nitro</a>
+    </div>
+  </aside>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>
