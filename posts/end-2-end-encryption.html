@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>System Messages on Moderation — Blog | The Admins Inbetween</title>
-<meta name="description" content="Sept 17, 2026 - Discord has started using system messages for moderation actions."/>
-<meta property="og:title" content="System Messages on Moderation — Blog"/>
-<meta property="og:description" content="Sept 17, 2026 - Discord has started using system messages for moderation actions."/>
+<title>End 2 End Encryption for Calls — Blog | The Admins Inbetween</title>
+<meta name="description" content="Feb 3, 2026 - Discord implements mandatory end-to-end encryption for voice calls."/>
+<meta property="og:title" content="End 2 End Encryption for Calls — Blog"/>
+<meta property="og:description" content="Feb 3, 2026 - Discord implements mandatory end-to-end encryption for voice calls."/>
 <meta property="og:type" content="article"/>
 <meta property="og:site_name" content="The Admins Inbetween"/>
 <meta name="twitter:card" content="summary"/>
@@ -25,16 +25,47 @@
 <div class="header">
   <div class="header-inner">
     <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
-    <p class="header-eyebrow"><span class="tag">Moderation</span>&nbsp;&nbsp;Sept 17, 2026</p>
-    <h1 style="max-width:22ch;">System Messages on Moderation</h1>
+    <p class="header-eyebrow"><span class="tag">Technical</span>&nbsp;&nbsp;Feb 3, 2026</p>
+    <h1 style="max-width:22ch;">End 2 End Encryption (DAVE) implementation</h1>
+    <p class="header-sub"> ↺ - Updated article. Review the changes under the article.</a></p>
   </div>
 </div>
 <div class="layout">
   <article class="article-body">
-      <p>Discord has seemingly started sending system messages to users when they're removed from a server by a moderator. Right now. it just informs you that it has happened, but the message does not specify whether it's a ban or kick or what the supplied reason was(if any). The moderator remain anonymous.</p>
-      <img src="../assets/system-messages-on-moderation.png" alt="System Messages on Moderation" style="max-width: 100%; border-radius: 8px;">
+      <p>A supported client will be required starting March 1st, 2026 to participate in all audio and video conversations in direct messages, group messages, voice channels and stage channels. Users on unsupported versions will not be able to connect to any calls. Interestingly, the article states that third party clients will continue to work, provided they implement E2EE support.</p>
+<ul>
+  <li>Minimum version, desktop
+    <ul>
+      <li>Windows 1.0.9164</li>
+      <li>macOS 0.0.320</li>
+      <li>Linux 0.0.69</li>
+    </ul>
+  <li>Minimum version, mobile
+    <ul>
+      <li>Android 247.0</li>
+      <li>iOS 247.0</li>
+    </ul>
+  <li>Minimum version, browser (E2EE for browsers has additional API dependencies, you may also need to update your OS for full compatibility, alongside running a supported Discord version)
+    <ul>
+      <li>Chrome 86</li>
+      <li>Firefox 142</li>
+      <li>Edge 86</li>
+      <li>Safari 15.4</li>
+      <li>Opera 72</li>
+    </ul>
+</ul>
+        <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--grey);">
+        <h2> ↺ Update (Mar 1, 2026): <b>E2EE requirements now live</b></h2>
+    <blockquote>
+  "Updated clients which support DAVE (Audio & Video End-to-End Encryption) Protocol are now required to connect to non-stages voice calls across the Discord Platform. If you attempt to connect with an out of date client, the voice gateway will reject your connection with close code 4017."
+</blockquote>     
   </article>
   <aside>
+    <div class="side-block">
+      <h3>Related Articles</h3>
+      <a class="lib-link" href="https://support.discord.com/hc/en-us/articles/38025123604631-Minimum-Client-Version-Requirements-for-Voice-Chat" target="_blank" rel="noopener noreferrer"><span class="lib-cat">Support Article</span>Minimum Client Version Requirements for Voice Chat</a>
+      <a class="lib-link" href="https://support.discord.com/hc/en-us/articles/25968222946071-End-to-End-Encryption-for-Audio-and-Video" target="_blank" rel="noopener noreferrer"><span class="lib-cat">Support Article</span>End-to-End Encryption for Audio and Video</a>
+    </div>
     <div class="side-block">
       <h3>More from the Blog</h3>
       <a class="lib-link" href="../posts/file-upload-update.html"><span class="lib-cat">Quality of Life</span>File Upload update</a>
@@ -44,8 +75,7 @@
     </div>
   </aside>
   <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
-    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button>
-    <span> Source - Dinorawr</span>
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
     <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr</span>
   </div>
 </div>
