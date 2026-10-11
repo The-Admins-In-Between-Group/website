@@ -169,3 +169,36 @@ footer a { color: var(--grey-light); font-weight: 700; text-decoration: none; bo
 .gallery-btn:hover { background: rgba(255, 255, 255, 0.2); }
 .gallery-btn.prev { left: 8px; }
 .gallery-btn.next { right: 8px; }
+
+@media (max-width: 768px) {
+  .nav-links { 
+    display: flex; 
+    position: absolute; 
+    top: 60px; 
+    left: 40px; 
+    background: var(--dark); 
+    padding: 16px 24px; 
+    border-radius: 8px; 
+    flex-direction: row; 
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .nav-links.show { 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px; 
+    color: var(--grey-light); 
+  }
+}

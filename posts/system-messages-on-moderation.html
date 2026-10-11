@@ -15,10 +15,10 @@
 </head>
 <body>
 <nav>
-  <a class="nav-title" href="../index.html" style="display: flex; align-items: center; gap: 10px;">
+  <a class="nav-title" href="index.html" onclick="if(window.innerWidth <= 768) { document.querySelector('.nav-links').classList.toggle('show'); return false; }" style="display: flex; align-items: center; gap: 10px;">
   <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
   The Admins Inbetween
-</a>
+  </a>
   <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
   <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
 </nav>
@@ -37,9 +37,9 @@
   <aside>
     <div class="side-block">
       <h3>More from the Blog</h3>
-      <a class="lib-link" href="../posts/file-upload-update.html"><span class="lib-cat">Quality of Life</span>File Upload update</a>
+      <a class="lib-link" href="../posts/support-for-full-ansi-colors.html"><span class="lib-cat">Quality of Life</span>Support for Full ANSI Colors</a>
+      <a class="lib-link" href="../posts/safer-for-teens-same-discord-for-adults.html"><span class="lib-cat">Safety</span> Safer for Teens: Same Discord for Adults</a>
       <a class="lib-link" href="../posts/server-settings-redesign-mobile.html"><span class="lib-cat">User Interface</span>Server Settings Redesign on Mobile</a>
-      <a class="lib-link" href="../posts/system-messages-on-moderation.html"><span class="lib-cat">Moderation</span>System messages on kicks & bans</a>
       <a class="lib-link" href="../posts/community-requested-updates.html"><span class="lib-cat">Quality of Life</span>Community Requested Updates</a>
     </div>
   </aside>
