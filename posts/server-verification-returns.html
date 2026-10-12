@@ -24,7 +24,7 @@
 </nav>
 <div class="header">
   <div class="header-inner">
-    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <a class="back-link" href="../blog.html" onclick="if(document.referrer.includes('blog.html')) { history.back(); return false; }">&larr; Back to Blog</a>
     <p class="header-eyebrow"><span class="tag">Community</span>&nbsp;&nbsp;March 11, 2026</p>
     <h1 style="max-width:22ch;">Server Verification Returns</h1>
   </div>
@@ -45,7 +45,7 @@
     <ul>
       <li>Game profiles are auto-generated. If no profile exists, you'll have to contact support.</li>
     </ul>
-  <li>The system performs an automated storefront check fro your server -- the server owner receieves an email with a verification code.
+  <li>The system performs an automated storefront check for your server -- the server owner receives an email with a verification code.
   <li>The application is submitted for manual review.
 </ul>
         <p>On approval, the server is awarded the verified badge and inherits its respective perks. Becoming verified also grants access to all-new analytics for your game on the developer portal, and allows you to manage your game's profile on Discord (description, genres, platforms, screenshots, banners, logos, developer and publisher names and official social media and links).</p>

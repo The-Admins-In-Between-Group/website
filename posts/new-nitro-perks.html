@@ -24,7 +24,7 @@
 </nav>
 <div class="header">
   <div class="header-inner">
-    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <a class="back-link" href="../blog.html" onclick="if(document.referrer.includes('blog.html')) { history.back(); return false; }">&larr; Back to Blog</a>
     <p class="header-eyebrow"><span class="tag">Nitro</span>&nbsp;&nbsp;May 11, 2026</p>
     <h1 style="max-width:22ch;">New Nitro Perks</h1>
     <p class="header-sub"> ↺ - Updated article. Review the changes under the article.</a></p>
@@ -70,6 +70,11 @@
       <a class="lib-link" href="../posts/safer-for-teens-same-discord-for-adults.html"><span class="lib-cat">Safety</span> Safer for Teens: Same Discord for Adults</a>
       <a class="lib-link" href="../posts/server-settings-redesign-mobile.html"><span class="lib-cat">User Interface</span>Server Settings Redesign on Mobile</a>
       <a class="lib-link" href="../posts/community-requested-updates.html"><span class="lib-cat">Quality of Life</span>Community Requested Updates</a>
+      <a class="lib-link" href="../posts/system-messages-on-moderation.html"><span class="lib-cat">Moderation</span>System Messages on Moderation</a>
+      <a class="lib-link" href="../posts/live-streaming-features-suspension-in-brazil.html"><span class="lib-cat">Safety</span>Live Streaming Features Suspension in Brazil</a>
+      <a class="lib-link" href="../posts/file-upload-update.html"><span class="lib-cat">Quality of Life</span>File Upload Update</a>
+      <a class="lib-link" href="../posts/new-profile-badges.html"><span class="lib-cat">User Interface</span>New Profile Badges</a>
+    </div>
   </aside>
   <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
     <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 

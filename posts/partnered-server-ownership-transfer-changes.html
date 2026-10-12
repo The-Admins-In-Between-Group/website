@@ -24,7 +24,7 @@
 </nav>
 <div class="header">
   <div class="header-inner">
-    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <a class="back-link" href="../blog.html" onclick="if(document.referrer.includes('blog.html')) { history.back(); return false; }">&larr; Back to Blog</a>
     <p class="header-eyebrow"><span class="tag">Community</span>&nbsp;&nbsp;June 5, 2026</p>
     <h1 style="max-width:22ch;">Changes to Partnered Server Transfers</h1>
   </div>

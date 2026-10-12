@@ -24,14 +24,14 @@
 </nav>
 <div class="header">
   <div class="header-inner">
-    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <a class="back-link" href="../blog.html" onclick="if(document.referrer.includes('blog.html')) { history.back(); return false; }">&larr; Back to Blog</a>
     <p class="header-eyebrow"><span class="tag">Moderation</span>&nbsp;&nbsp;Sept 17, 2026</p>
     <h1 style="max-width:22ch;">System Messages on Moderation</h1>
   </div>
 </div>
 <div class="layout">
   <article class="article-body">
-      <p>Discord has seemingly started sending system messages to users when they're removed from a server by a moderator. Right now. it just informs you that it has happened, but the message does not specify whether it's a ban or kick or what the supplied reason was(if any). The moderator remain anonymous.</p>
+      <p>Discord has seemingly started sending system messages to users when they're removed from a server by a moderator. Right now. it just informs you that it has happened, but the message does not specify whether it's a ban or kick or what the supplied reason was(if any). The moderator remains anonymous.</p>
       <img src="../assets/system-messages-on-moderation.png" alt="System Messages on Moderation" style="max-width: 100%; border-radius: 8px;">
   </article>
   <aside>

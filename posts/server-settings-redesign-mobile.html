@@ -24,7 +24,7 @@
 </nav>
 <div class="header">
   <div class="header-inner">
-    <a class="back-link" href="../blog.html">&larr; Back to Blog</a>
+    <a class="back-link" href="../blog.html" onclick="if(document.referrer.includes('blog.html')) { history.back(); return false; }">&larr; Back to Blog</a>
     <p class="header-eyebrow"><span class="tag">User Interface</span>&nbsp;&nbsp;Sept 17, 2026</p>
     <h1 style="max-width:22ch;">Server Redesign on Mobile</h1>
     <p class="header-sub"> ↺ - Updated article. Review the changes under the article.</a></p>
@@ -32,7 +32,7 @@
 </div>
 <div class="layout">
   <article class="article-body">
-      <p>After years of requesting, Discord has finally redesigned the server settings to bring Automod configuration (amomng others) to mobile.</p>
+      <p>After years of requesting, Discord has finally redesigned the server settings to bring Automod configuration (among others) to mobile.</p>
       <p>(⚠️ This has not been officially announced, this is just from an engineer that worked on it so there is no ETA and is subject to change.)</p>
       <hr style="border: none; border-top: 1px solid var(--dark); margin: 36px 0;">
       <h2> ↺ Update (Sept 22, 2026): <b>Redesign launched on Alpha/Beta</b></h2>
