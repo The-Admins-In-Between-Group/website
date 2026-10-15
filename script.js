@@ -17,22 +17,19 @@ function changeImage(button, direction) {
 
 function filterPosts() {
   const query = document.getElementById('searchInput').value.toLowerCase();
-  const selectedTags = Array.from(document.getElementById('tagFilter').selectedOptions)
-    .map(opt => opt.value.toLowerCase()).filter(v => v !== "");
-  const selectedPublishers = Array.from(document.getElementById('publisherFilter').selectedOptions)
-    .map(opt => opt.value.toLowerCase()).filter(v => v !== "");
+  const selectedTag = document.getElementById('tagFilter').value.toLowerCase();
+  const selectedPublisher = document.getElementById('publisherFilter').value.toLowerCase();
 
   let visibleCount = 0;
 
   document.querySelectorAll('.post').forEach(post => {
-    const titleText = post.querySelector('h2').textContent.toLowerCase();
-    const descText = post.querySelector('p').textContent.toLowerCase();
-    const postTag = post.querySelector('.tag').textContent.toLowerCase();
+    const titleText = post.querySelector('h2')?.textContent.toLowerCase() || "";
+    const descText = post.querySelector('p')?.textContent.toLowerCase() || "";
     const postPublisher = (post.getAttribute('data-publisher') || "").toLowerCase();
-
+    const postTags = Array.from(post.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
     const matchesText = titleText.includes(query) || descText.includes(query);
-    const matchesTag = selectedTags.length === 0 || selectedTags.includes(postTag);
-    const matchesPublisher = selectedPublishers.length === 0 || selectedPublishers.includes(postPublisher);
+    const matchesTag = selectedTag === "" || postTags.includes(selectedTag);
+    const matchesPublisher = selectedPublisher === "" || postPublisher === selectedPublisher;
 
     if (matchesText && matchesTag && matchesPublisher) {
       post.style.display = '';
