@@ -17,6 +17,7 @@ function changeImage(button, direction) {
 
 function filterPosts() {
   const query = document.getElementById('searchInput').value.toLowerCase();
+  const itemName = window.location.pathname.includes('library') ? 'post' : 'article';
   const selectedTag = document.getElementById('tagFilter').value.toLowerCase();
   const selectedPublisher = document.getElementById('publisherFilter').value.toLowerCase();
 
@@ -39,7 +40,7 @@ function filterPosts() {
     }
   });
 
-  document.getElementById('postCount').textContent = `Showing ${visibleCount} post${visibleCount === 1 ? '' : 's'}`;
+  document.getElementById('postCount').textContent = `Showing ${visibleCount} ${itemName}${visibleCount === 1 ? '' : 's'}`;
 }
 
 function resetAllFilters() {

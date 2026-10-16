@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Transferring server ownership — Library | The Admins Inbetween</title>
+<meta name="description" content="Nov 16, 2026 - Understand how server ownership transfers happen for Partnered and Verified servers"/>
+<meta property="og:title" content="Transferring server ownership — Library"/>
+<meta property="og:description" content="Nov 16, 2026 - Understand how server ownership transfers happen for Partnered and Verified servers"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" onclick="if(window.innerWidth <= 768) { document.querySelector('.nav-links').classList.toggle('show'); return false; }" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+  </a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../library.html" onclick="if(document.referrer.includes('library.html')) { history.back(); return false; }">&larr; Back to Library</a>    
+    <p class="header-eyebrow"><span class="tag">Support</span>&nbsp;&nbsp;Nov 5, 2026</p>
+    <h1 style="max-width:22ch;">PARTNERS & VERIFIED: Transferring server <span>ownership</span></h1>
+  </div>
+</div>
+<div class="layout single">
+  <article class="article-body" style="max-width: 1100px ;">
+      <p>Owners of <b>Partnered</b> and/or <b>Verified</b> servers can not transfer ownership by themselves, this can only be done by Discord.</p>
+      <ul>
+        <li>Make a support ticket at <a href="https://dis.gd/support" target="_blank" rel="noopener noreferrer">https://dis.gd/support</a> > Help & Support > Server Related Questions > Server Ownership Transfer Requests</li>
+        <li>Fill out the form and submit</li>
+      </ul>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Imporant change:</h2>
+      <p>As of April 2026, it is no longer possible to escalate your transfer request via Discord Admins or Discord Town Hall, nor is this necessary anymore. All requests, including those for partnered and verified servers are now properly handled through the regular support queue. Note that this may be at cost of longer wait time.</p>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Important warning:</h2>
+      <p>Transferring ownership of a Partnered server will result in the badge and perks being removed from both the owner and server. <a href="../posts/partnered-server-ownership-transfer-changes.html">Learn More</a></p>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Here's what you need to keep in mind:</h2>
+      <ul>
+        <li><b>Verified only:</b> your server must be transferred to someone within your company or an official representative (such as a publisher or music label).</li>
+        <li><b>Partners only:</b> you will lose access to all partner perks on your account (your profile badge and free Nitro)</li>
+        <li>Transfers are not guaranteed, there may be security or other internal reasons leading to a denial of your request.</li>
+        <li>Only the server owner may submit a transfer request - this can not be inititalized by an admin or mod.</li>
+      </ul>
+    </article>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>

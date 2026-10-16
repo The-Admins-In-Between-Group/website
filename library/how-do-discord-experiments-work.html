@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Experiments on Discord — Library | The Admins Inbetween</title>
+<meta name="description" content="Nov 5, 2026 - Understand how Experiments work on Discord and how new features and updates are released"/>
+<meta property="og:title" content="Experiments on Discord — Library"/>
+<meta property="og:description" content="Nov 5, 2026 - Understand how Experiments work on Discord and how new features and updates are released"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" onclick="if(window.innerWidth <= 768) { document.querySelector('.nav-links').classList.toggle('show'); return false; }" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+  </a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../library.html" onclick="if(document.referrer.includes('library.html')) { history.back(); return false; }">&larr; Back to Library</a>    
+    <p class="header-eyebrow"><span class="tag">Technical</span>&nbsp;&nbsp;<span class="tag">Inner workings</span>&nbsp;&nbsp;Nov 5, 2026</p>
+    <h1 style="max-width:22ch;">How do <span>Discord</span> experiments work?</h1>
+  </div>
+</div>
+<div class="layout single">
+  <article class="article-body" style="max-width: 1100px ;">
+      <p><b>You probably asked this before: "how do I get access to this?" or "does anyone else have this?"</b></p>
+      <p>Discord uses A/B Testing to roll out new features, also known as Experiments. The idea is simple: Group A is given access to a new feature Discord is testing, while Group B is not, and is often even unaware of it. Before we dive into specifics, here's a few words you'll see mentioned in this post:
+        <ul>
+          <li><b>Experiment:</b> a new setting, re-design or feature Discord is working on and testing.</li>
+          <li><b>Rollout:</b> in different words, how many people or servers can use or see an experiment.</li>
+          <li><b>Treatment:</b> a specific version of the experiment, you'll always find at least 2 of them (A/B)</li>
+          <li><b>Range:</b> a group of users put together to receieve any given treatment of an experiment.</li>
+          <li><b>Override:</b> an exception to manually grant the experiment to a user or server, no matter what.</li>
+          <li><b>User experiment:</b> this experiment applies strictly to users (such as the UI re-design)</li>
+          <li><b>Server experiment:</b> this experiment applies strictly to servers (such as the new boosting perks)</li>
+        </ul>
+      </p>
+      <p>Please note that experiments are in-development features that are being tested. As such, they may drastically change over time, or even be scrapped entirely by the end of the experiment.</p>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Are experiments random?</h2>
+      <p>Yes, the system that determines who does or doesn't get an experiment is random. It's based on a mathematical algorithm:</p>
+      <blockquote>
+  result = mmh3.hash('exp_name:resource_id', signed=False) % 10000
+      </blockquote>
+      <p>Using this method, everyone is assigned a number between 0 to 10,000. In a manner of speaking, this is your position in line to use or see any given experiment, though this is a simplification of the process. Your number can give you an estimation for when you'll get the experiment, but it's not the whole truth.</p>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>So how do the rollouts work?</h2>
+      <p>You'll often see people speak about percentages: "this feature is currently available to 5% of users." That percentage directly links back to your number as explained earlier. A rollout of 5% implies users with numbers between 0 and 500 have access. This range of numbers is also called a Group Range, or just a "Group" or Range."</p>
+      <p>Generally speaking, groups start from 0 and go up to 10,000. Though uncommon, nothing stops the developers from starting about anywhere; that 5% could also be a range of 7200-7700, or may even consist of multiple ranges such as "750-1000 + 5000-5250" or even "0-100, 4300-3500 and 7550-7750"</p>
+      <p>When a rollout increases by any percentage, it adds new group ranges, which means more people can use or see the experiment. The control group is usually also increased up to a certain point (explained in the next section below)</p>
+      <img src="../assets/how-do-discord-experiments-work1.png" alt="How do the rollouts work?" style="max-width: 100%; border-radius: 8px;">
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Why do experiments have different treatments?</h2>
+      <p>Treatments are different versions of any given experiment. You'll find at least 2 different treatments on each experiment, amd they are generally the most important ones: Control and Treatment 1 (Group A and B)</p>
+      <p>One group has the experiment, the other doesn't. The one that does not is called Control, and while you may not have access to the treatment, you are actively part of it. The control group is used to collect information relevant to an experiment. This information is then compared to users in Treatment 1.</p>
+      <p>Despite it being called "A/B Testing". there can be as many groups as Discord needs, you may sometimes spot a Treatment 2 or Treatment 3, in some cases even more. This is usually when an experiment has multiple different designs; a different treatment might have a fancier or bigger button somewhere.</p>
+      <p>Users in control usually do not get access until it is ready and heading for a full release or at release.</p>
+      <img src="../assets/how-do-discord-experiments-work2.png" alt="Why do experiments have different treatments?" style="max-width: 65%; border-radius: 8px;">
+      <p style="margin-top: 8px; font-size: 14px; color: var(--grey);">Users in the "Not included" group are not included in any way whatsoever. Their fate is still undecided.</p>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Are rollouts impacted in any other way?</h2>
+      <p>Aside from just getting lucky, you will also need to fulfill Filter rules. Though filters are optional and not present most of the time, they fine tune availability of an experiment. For example, a certain experiment will only appear on a server if it has at least 1000 members, assuming it falls within that lucky range in the first place.</p>
+      <p>Filters may also be used to specify platforms, like "Android only". They can exclude servers from the experiment by requiring it to have been created before or after a specific date and time or for a specific condition to be met, such as the server being discoverable.</p>
+      <p>It's important to note that any given experiment can have multiple filters, and that they all have to be fulfilled, thus strictly curating access to the experiment to only those that meet all the criteria.</p>
+      <img src="../assets/how-do-discord-experiments-work3.png" alt="Are rollouts impacted in any other way?" style="max-width: 100%; border-radius: 8px;">
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>I've heard people mention Overrides, what are those?</h2>
+      <p>Overrides are really relevant to us, but it's good to know what they actually entail. Overrides are used by Discord to force enable experiments for users and experiments outside the regular A/B system. If you're ever told the rollout of an experiment is 0%, but see it in a server regardless, it means it has an override.</p>
+      <p>Overrides are almost always limited to Discord employees and internal servers. They may also be given to users in Discord's inner circle or those in various bug hunter/testing programs. Rarely, certain experiment can be "applied for" in certain servers (i.e Discord Admins) or via Feedback Surveys. Examples of such experiments are Channel Summaries and Flag to Mods, respectively.</p>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Can I somehow keep track of all this myself?</h2>
+      <p>Yes, you can track server experiments for yourself through sites like <a href="https://nelly.tools/" target="_blank" rel="noopener noreferrer">nelly.tools</a>. You can browse experiments, view their rollout progress and history, see different treatments and their group ranges and even easily calculate your position for a specific treatment to see where you currently fit in.</p>
+      <p><b>IMPORTANT:</b> Only server experiments can be readily tracked. User experiments are considerably harder and unreliable to track, so information on those is very limited. You'll hear news about them from dataminers directly such as <a href="https://discord.gg/discord-603970300668805120" target="_blank" rel="noopener noreferrer">Discord Previews</a> & <a href="https://discord.gg/SmCNZEM9K9" target="_blank" rel="noopener noreferrer">Wumpus Central</a>.</p>
+      <p>Want a more technical explanation? Visit <a href="https://docs.discord.food/topics/experiments" target="_blank" rel="noopener noreferrer">https://docs.discord.food/topics/experiments</a></p>
+    </article>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>

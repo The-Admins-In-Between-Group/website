@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Verify Member — Library | The Admins Inbetween</title>
+<meta name="description" content="Nov 16, 2026 - Understand what the Verify Member button does"/>
+<meta property="og:title" content="Verify Member — Library"/>
+<meta property="og:description" content="Nov 16, 2026 - Understand what the Verify Member button does"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" onclick="if(window.innerWidth <= 768) { document.querySelector('.nav-links').classList.toggle('show'); return false; }" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+  </a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../library.html" onclick="if(document.referrer.includes('library.html')) { history.back(); return false; }">&larr; Back to Library</a>    
+    <p class="header-eyebrow"><span class="tag">Tips</span>&nbsp;&nbsp;<span class="tag">Moderation</span>&nbsp;&nbsp;Nov 16, 2026</p>
+    <h1 style="max-width:22ch;">What does the "<span>Verify Member</span>" button do?</h1>
+  </div>
+</div>
+<div class="layout single">
+  <article class="article-body" style="max-width: 1100px ;">
+      <p>The mysterious <b>Verify Member</b> button. I just appeared one day without any explanation and you've probably seen it before and may have been wondering what it does.</p>
+      <p><b>Verifying a member</b> waives the <u>server verification level</u> for that user and allows them to interact on the server.</p>
+      <ul>
+        <li><b>LOW:</b> Must have a verified email on their Discord account</li>
+        <li><b>MEDIUM:</b> Must also be registered on Discord for longer than 5 minutes.</li>
+        <li><b>HIGH:</b> Must also be a member of the server for longer than 10 minutes.</li>
+        <li><b>HIGHEST:</b> Must have a verified phone on their Discord account.</li>
+      </ul>
+      <p>Unverified a member re-applies these requirements, if they have taken no steps since (i.e. added a phone number when your server is on HIGHEST), they will lose the abilty to interact on the server until they do so or you re-verify them.</p>
+      <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+      <h2>Good to know:</h2>
+      <ul>
+        <li>Users with a phone number on their account skip the 10 minutes waiting time upon joining when your level is set to HIGH or HIGHEST.</li>
+        <li>If a user is assigned a role while onboarding is disabled, the server verification level is waived for them (equivalent to verifying them). If onboarding was ever enabled before (even if later disabled), the server verification level will continue to be required (assigning a role will no longer bypass it)</li>
+      </ul>
+      <img src="../assets/what-does-the-verify-button-do.png" alt="Verify Member" style="max-width: 100%; border-radius: 8px;">
+    </article>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>
