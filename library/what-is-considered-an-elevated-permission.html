@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Elevated Permission — Library | The Admins Inbetween</title>
+<meta name="description" content="June 13, 2026 - What is considered an elevated permission for server 2FA requirement?"/>
+<meta property="og:title" content="Elevated Permission — Library"/>
+<meta property="og:description" content="June 13, 2026 - What is considered an elevated permission for server 2FA requirement?"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" onclick="if(window.innerWidth <= 768) { document.querySelector('.nav-links').classList.toggle('show'); return false; }" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+  </a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../library.html" onclick="if(document.referrer.includes('library.html')) { history.back(); return false; }">&larr; Back to Library</a>    
+    <p class="header-eyebrow"><span class="tag">Moderation</span>&nbsp;&nbsp;<span class="tag">Inner Workings</span>&nbsp;&nbsp;June 13, 2026</p>
+    <h1 style="max-width:22ch;">What is considered an "<span>elevated permission</span>"?</h1>
+  </div>
+</div>
+<div class="layout single">
+  <article class="article-body" style="max-width: 1100px ;">
+    <p>You've seen it, or been perhaps even forced to enable it. "<b>Require 2FA for moderator actions</b>". Turning this on will require members with elevated permissions to have multi-factor authentication enabled to perfoem certain actions. What is considered a "moderator action" you ask? Here's the list of permissions that require 2FA:</p>
+    <ul>
+      <li style="margin-bottom: 5px;">Administrator</li>
+      <li style="margin-bottom: 5px;">Manage Server</li>
+      <li style="margin-bottom: 5px;">Manage Channels</li>
+      <li style="margin-bottom: 5px;">Manage Roles</li>
+      <li style="margin-bottom: 5px;">Manage Threads and Posts</li>
+      <li style="margin-bottom: 5px;">Manage Messages</li>
+      <li style="margin-bottom: 5px;">Kick, Approve and Reject Members</li>
+      <li style="margin-bottom: 5px;">Timeout Members</li>
+      <li>Ban Members</li>
+    </ul>
+    <h2 style="font-size: 17px; margin-bottom: 5px;">⚠️ Take note:</h2>
+    <ul>
+      <li style="margin-bottom: 5px;">This requirement applies to native actions only (using Discord's built-in menus and buttons), they may still be executed using bot commands without having 2FA enabled (Not all bots may enforce this requirement)</li>
+      <li style="margin-bottom: 5px;">Mute, deafen and move member (for voice channels) does <b><u>not</u></b> require 2FA.</li>
+      <li style="margin-bottom: 18px;">If your users report seeing the "2FA Required" prompt on your server, you have misconfigured permissions. Thoroughly check all your roles, including channel overrides!</li>
+    </ul>
+    <h2 style="font-size: 17px;">⭐️ Good to know:</h2>
+    <p style="margin-bottom: 5px;">Users gain access to the <b>Members</b> tab when they have at least one of the following permissions listed below (regardless if the 2FA requirement is met). They can interact with the entire thing (see invite used, account flags, etc), but will only be allowed to perform actions that they actually have permissions for.</p>
+    <ul>
+      <li style="margin-bottom: 5px;">Administrator</li>
+      <li style="margin-bottom: 5px;">Manage Server</li>
+      <li style="margin-bottom: 5px;">Manage Roles</li>
+      <li style="margin-bottom: 5px;">Manage Nicknames</li>
+      <li style="margin-bottom: 5px;">Kick, Approve and Reject Members</li>
+      <li style="margin-bottom: 5px;">Timeout Members</li>
+      <li>Ban Members</li>
+    </ul>    
+    </article>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onc style="margin-bottom: 5px;"ck="nativeShare()">&#10150; Share</button> 
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>

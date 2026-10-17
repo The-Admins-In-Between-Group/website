@@ -45,6 +45,7 @@ nav { display: flex; align-items: center; justify-content: space-between; paddin
 .post h2 a { color: var(--white); text-decoration: none; }
 .post h2 a:hover { color: var(--blurple); }
 .post p { font-size: 13.5px; line-height: 1.65; color: var(--grey-light); max-width: 100ch; }
+.emoji { height: 1em; width: auto; vertical-align: -0.1em; margin: 0 2px; }
 .post-link { display: inline-block; margin-top: 14px; font-size: 12.5px; font-weight: 600; color: var(--blurple); text-decoration: none; }
 .post-link:hover { text-decoration: underline; }
 

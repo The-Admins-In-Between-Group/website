@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Profile Privacy — Library | The Admins Inbetween</title>
+<meta name="description" content="April 30, 2026 - What does the new Profile Privacy setting hide"/>
+<meta property="og:title" content="Profile Privacy — Library"/>
+<meta property="og:description" content="April 30, 2026 - What does the new Profile Privacy Setting hide"/>
+<meta property="og:type" content="article"/>
+<meta property="og:site_name" content="The Admins Inbetween"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="theme-color" content="#5865F2"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<nav>
+  <a class="nav-title" href="../index.html" onclick="if(window.innerWidth <= 768) { document.querySelector('.nav-links').classList.toggle('show'); return false; }" style="display: flex; align-items: center; gap: 10px;">
+  <img src="../assets/logo.png" alt="Logo" style="height: 24px;">
+  The Admins Inbetween
+  </a>
+  <div class="nav-links"><a class="navlink" href="../index.html">Home</a><a class="navlink" href="../blog.html">Blog</a><a class="navlink" href="../library.html">Library</a></div>
+  <div class="nav-right"><a class="join-btn" href="https://discord.gg/theinbetween" target="_blank" rel="noopener noreferrer">Join us</a></div>
+</nav>
+<div class="header">
+  <div class="header-inner">
+    <a class="back-link" href="../library.html" onclick="if(document.referrer.includes('library.html')) { history.back(); return false; }">&larr; Back to Library</a>    
+    <p class="header-eyebrow"><span class="tag">Safety</span>&nbsp;&nbsp;<span class="tag">Inner Workings</span>&nbsp;&nbsp;April 30, 2026</p>
+    <h1 style="max-width:22ch;">What does the new <span>Profile</span> Privacy setting hide?</h1>
+  </div>
+</div>
+<div class="layout single">
+  <article class="article-body" style="max-width: 1100px ;">
+    <p>Discord is working on introducing enhanced privacy settings for profile. This post will briefly go over what is, and is not hidden from others when enabled.</p>
+    <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+    <h2>How to enable</h2>
+    <ul>
+      <li>Head to your settings
+        <ul>
+          <li>Data & Privacy > Look for the <b>Profile Privacy</b> section</li>
+        </ul>
+      <li>Here you have three options:
+        <ul>
+          <li><b>Friends & All Servers:</b> Your full profile will be visible to everyone who shares a server with you, or is a friend.</li>
+          <li><b>Friends & Small Servers:</b> Your full profile will only be visible to users sharing with you that has 200 or less members, or is a friend.</li>
+          <li><b>Friends Only:</b> Only users added as a friend will be able to see your full profile.</li>
+        </ul>
+    </ul>
+    <p>The introduction of Profile Privacy means that users who do not share any servers with you and are not added as a friend will no longer see your full profile by default. This does not affect their ability to find and add you.</p>
+    <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+    <h2>What information is hidden?</h2>
+    <p style="margin-bottom: 5px;">The following information is <u>hidden</u> from yoir profile when enabled:</p>
+    <ul>
+      <li style="margin-bottom: 5px;">Custom Status</li>
+      <li style="margin-bottom: 5px;">Pronouns</li>
+      <li style="margin-bottom: 5px;">Badges</li>
+      <li style="margin-bottom: 5px;">Activity</li>
+      <li style="margin-bottom: 5px;">Connected accounts</li>
+      <li style="margin-bottom: 5px;">About me (bio)</li>
+      <li style="margin-bottom: 5px;">Widgets</li>
+      <li style="margin-bottom: 18px;">Wishlists</li>
+    </ul>
+    <p style="margin-bottom: 5px;">The following is <u>always visible</u>, regardless of your Profile Privacy settings:</p>
+    <ul>
+      <li style="margin-bottom: 5px;">Avatar</li>
+      <li style="margin-bottom: 5px;">Banner</li>
+      <li style="margin-bottom: 5px;">Display Name</li>
+      <li style="margin-bottom: 5px;">Username</li>
+      <li style="margin-bottom: 5px;">Server Tag (if set to public)</li>
+      <li style="margin-bottom: 5px;">Account Age</li>
+      <li style="margin-bottom: 18px;">Mutual friends and servers</li>
+    </ul>
+    <hr style="border: none; border-top: 2px solid var(--grey); margin: 36px 0; max-width: 850px ;">
+    <h2 style="margin-bottom: 5px;">Good to know</h2>
+    <ul>
+      <li style="margin-bottom: 5px;">Other privacy settings remain independant, such as who can send you messages or friend requests.</li>
+      <li style="margin-bottom: 5px;">Activity Privacy can be toggled independently from your profile visibility to override sharing.</li>
+      <li style="margin-bottom: 5px;">You will not need to be age-verified in order to change Profile Privacy settings.</li>
+      <li style="margin-bottom: 18px;">Does not interfere with Native Automod, specifically the username rule.</li>
+    </ul>
+    <p>Learn more about it in the Support article: <a href="https://support.discord.com/hc/en-us/articles/38859942749463-Profile-Privacy-Setting-on-Discord" target="_blank" rel="noopener noreferrer">Profile Privacy Setting on Discord</a></p>
+    </article>
+  <div class="share-row" style="grid-column: 1 / -1; display: flex; gap: 10px;">
+    <button class="share-btn" onclick="nativeShare()">&#10150; Share</button> 
+    <span style="margin-left: auto; font-size: 14px; color: var(--grey);">&mdash; Published by Dinorawr</span>
+  </div>
+</div>
+</div>
+<div class="brand-mark"><span>ADMINS</span></div>
+<div class="footer-wrap">
+  <footer style="text-align:center">Not affiliated with Discord &nbsp;&middot;&nbsp; A companion project to <a href="https://killedbydiscord.com" target="_blank" rel="noopener noreferrer">killedbydiscord.com</a> &nbsp;&middot;&nbsp; Built by <a href="https://discord.gg/chubby-pixel" target="_blank" rel="noopener noreferrer">peppybug</a>, <a href="https://coxipooh.yrs.wtf/" target="_blank" rel="noopener noreferrer">coxipooh</a> & <a href="https://github.com/Dinorawrrrrr" target="_blank" rel="noopener noreferrer">dinorawr</a></footer>
+</div>
+<script>
+function copyLink(btn){
+  navigator.clipboard.writeText(window.location.href).then(function(){
+    var old = btn.textContent;
+    btn.textContent = "Link copied";
+    btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent = old; btn.classList.remove("copied"); }, 1800);
+  });
+}
+</script>
+<script src="../script.js" defer></script>
+</body>
+</html>
